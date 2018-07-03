@@ -1,2 +1,2 @@
-class MyValidator < ActiveModel::Validator 
+class MyValidator < ActiveModel::Validator
 end
