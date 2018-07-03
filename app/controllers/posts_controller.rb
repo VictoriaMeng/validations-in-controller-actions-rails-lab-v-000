@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     binding.pry
     set_post!
     params.each do |key, value|
-      @post.key = value if @post.has_attribute?(key)
+      @post."#{key}" = value if @post.has_attribute?(key)
     end
     if @post.valid?
       @post.save
