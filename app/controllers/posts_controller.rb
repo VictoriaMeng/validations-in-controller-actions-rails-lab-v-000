@@ -9,7 +9,10 @@ class PostsController < ApplicationController
 
   def update
     binding.pry
-
+    set_post!
+    params.each do |key, value|
+      @post.key = value if @post.has_attribute?(key) )
+    end
     redirect_to post_path(@post)
   end
 
