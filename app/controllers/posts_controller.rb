@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update(post_params)
+    binding.pry
 
     redirect_to post_path(@post)
   end
