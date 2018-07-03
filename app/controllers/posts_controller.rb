@@ -13,7 +13,12 @@ class PostsController < ApplicationController
     params.each do |key, value|
       @post.key = value if @post.has_attribute?(key) )
     end
-    redirect_to post_path(@post)
+    if @post.valid?
+      @post.save
+      redirect_to post_path(@post)
+    else 
+      render :edit 
+    end
   end
 
   private
