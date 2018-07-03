@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    binding.pry
     set_post!
     params.each do |key, value|
       @post.send("#{key}=", value) if @post.has_attribute?(key)
